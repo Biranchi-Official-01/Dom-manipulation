@@ -1,16 +1,28 @@
-const para = document.querySelector("p")
+const para = document.querySelector("p");
 
-const charecter  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrseuvwxyz"
+const charecter = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrseuvwxyz";
 
-const text = para.innerText
+const text = para.innerText;
 
-para.addEventListener('mouseenter',()=>{
+let iteration = 0;
 
-    setInterval(() => {
-        const str = text.split('').map((char,index) =>{
-            return charecter.split('')[Math.floor(Math.random()*53)]
-        }).join("")
+para.addEventListener("mouseenter", function () {
+    function randomText() {
+    const str = text
+      .split("")
+      .map((char, index) => {
+        if (index < iteration) {
+          return char;
+        }
+        return charecter.split("")[Math.floor(Math.random() * 53)];
+      })
+      .join("");
 
-        para.innerText = str
-    }, 50);
-})
+    para.innerText = str;
+
+    iteration += 0.5;
+  }
+
+  setInterval(randomText, 20);
+  
+});
