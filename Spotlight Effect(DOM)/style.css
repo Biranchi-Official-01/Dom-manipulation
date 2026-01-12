@@ -1,0 +1,73 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --x: 750px;
+    --y: 50px;
+}
+
+.boxx{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(250px at var(--x) var(--y), rgba(0, 0, 0, 0.153) , rgb(6, 3, 3));
+}
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    
+}
+.main h1{
+    font-size: 60px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, rgb(183, 11, 183) , rgba(0, 0, 255, 0.79));
+}
+.main p{
+    margin-bottom: 50px;
+}
+.main .box{
+    /* background-color: gray; */
+    height: 60%;
+    width: 70%;
+    margin-bottom: 60px;
+    display: grid;
+    grid: 180px / auto auto auto;
+    grid-gap: 20px;
+    /* background-color: #2196F3; */
+    padding: 20px;
+    
+}
+
+.main .box .card{
+    background-color: rgba(50, 50, 50, 0.8);
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    /* font-size: 30px; */
+}
+
